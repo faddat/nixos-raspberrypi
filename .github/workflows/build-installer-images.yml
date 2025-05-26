@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
   pull_request:
     branches:
       - main
@@ -12,8 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SSH_PUB_KEY: ${{ secrets.SSH_PUB_KEY }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
