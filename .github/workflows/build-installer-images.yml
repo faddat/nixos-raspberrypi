@@ -15,6 +15,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: qemu
+        run: sudo apt-get install qemu-kvm
+
 
       - uses: cachix/install-nix-action@v31.3.0
 
